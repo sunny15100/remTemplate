@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+	<style>
+		.container {
+			width: 10rem
+		}
+	</style>
+</head>
+
+<body>
+	<div class='container'>123</div>
+	<script>
+		document.addEventListener('DOMContentLoaded', function (e) {
+			document.getElementsByTagName('html')[0].style.fontSize = window.innerWidth / 10 + 'px'
+			var meta = document.createElement('meta')
+			var dpr = window.devicePixelRatio
+			meta.setAttribute('name', 'viewport')
+			meta.setAttribute('content', 'initial-scale=' + 1 / dpr + ', maximum-scale=' + 1 / dpr + ', minimum-scale=' + 1 / dpr + ', user-scalable=no')
+			document.getElementsByTagName('head')[0].appendChild(meta)
+		}, false)
+	</script>
+</body>
+
+</html>
